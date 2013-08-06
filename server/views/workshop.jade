@@ -1,0 +1,14 @@
+extends signedin_header
+
+block lowerbody
+    .container-fluid
+        .row-fluid.well
+                ul.nav.nav-pills
+                  li.active
+                    a(href='/workshop') Construction
+                  li
+                    a(href='/workshop_programming') Programming
+                  li
+                    a(href='/workshop_testing') Testing
+ 
+                block workshop_lower

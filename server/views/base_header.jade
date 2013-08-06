@@ -1,0 +1,12 @@
+html(lang="en")
+    head
+        title=RobotWars
+        script(type='text/javascript', src='/socket.io/socket.io.js')
+        link(type='text/css', rel='stylesheet', href='public/css/bootstrap.min.css')
+    body
+        .navbar
+            .navbar-inner
+                a.brand(href='#') Battle Robots
+                block body
+        block lowerbody
+        

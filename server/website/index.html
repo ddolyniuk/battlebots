@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+          var socket = io.connect('http://localhost:1337/');
+          socket.on('news', function (data) {
+            console.log(data);
+            socket.emit('my other event', { my: 'data' });
+          });
+        </script>
+    </head>
+    <body>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <a class="brand" href="#">Battle Robots</a>
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class='span3'>
+            <div class='well'>
+                Challenges
+            </div>
+        </div>
+        <div class='span4'>
+            <div class='well'>
+                Welcome please sign in or register
+            </div>
+        </div>
+    </body>
+</html>

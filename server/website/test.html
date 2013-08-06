@@ -1,0 +1,26 @@
+<html> 
+    <head>
+        <!--<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>-->
+        <script type='text/javascript' src='js/three.min.js'>
+        </script>
+        <script type='text/javascript' src='js/World.js'>
+        </script>
+        <script type='text/javascript' src='js/trackballControls.js'>
+        </script>
+         
+    <head>
+    <body>
+        <script>
+            var test = undefined;
+			var world = new World();
+            world.start( function() { 
+                world.addObject('./models/testZone.js', {repeat: [4,4], y: 300});
+                world.addObject('./models/cobbleBarricade.js', {repeat: [4,4], y: 400, x:200, rotY: Math.PI});
+                
+                world.addObject('./models/cobbleBarricade.js', {repeat: [4,4], y: 430, x:-140});
+                
+                world.addObject('./models/cobbleBarricade.js', {repeat: [4,4], y: 630, x:-140});
+            });
+        </script>
+    </body>
+</html>

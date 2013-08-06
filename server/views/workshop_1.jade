@@ -1,0 +1,35 @@
+extends workshop
+
+block workshop_lower
+    script.
+        var sessionID = #{sessionID};
+        var sessionKey = "#{sessionKey}";
+    script(src='./public/js/jquery.min.js') 
+    script(src='./public/js/wcon.js')
+    script(src='./public/js/World.js')
+    script.
+        var world = new World({sizeWidth: 600, sizeHeight: 600});
+        world.start( function() { 
+                world.addObject('./models/testZone.js', {repeat: [4,4], y: 300});
+                world.addObject('./models/cobbleBarricade.js', {repeat: [4,4], y: 400, x:200, rotY: Math.PI});
+                
+                world.addObject('./models/cobbleBarricade.js', {repeat: [4,4], y: 430, x:-140});
+                
+                world.addObject('./models/cobbleBarricade.js', {repeat: [4,4], y: 630, x:-140});
+            });
+    .span2
+        .well
+            .h3 Tools
+            ul.nav.nav-tabs.nav-stacked
+                li
+                    a Optical
+                li
+                    a Weapons
+                li
+                    a Movement
+                li
+                    a Structural
+    .span8
+        .well#canvas
+            
+            

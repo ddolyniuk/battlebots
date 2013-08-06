@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+        <script src='./js/three.min.js'>
+        </script>
+        <script src='./js/World.js'>
+        </script>
+        <script src='./js/Builder.js'>
+        </script>
+        
+        <!--<script src='./js/jquery.min.js'>
+        </script>
+        <script src='./js/wcon.js'>
+        </script>-->
+
+    </head>
+    <body>
+        <script>
+            var x = new World({bStationaryCam:true, sizeWidth:1280, sizeHeight: 1081, bUseWindowSize: false, });
+            x.start();
+            x.addObject('./models/attachment2.js', {y:10, physics:false}, function(newMesh) {
+               
+            }); 
+            
+            var builder = new Builder(x);
+            builder.start();
+            builder.addHelper('./models/attachment3.js');
+        </script>
+    </body>
+</html>

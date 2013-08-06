@@ -1,0 +1,32 @@
+extends nav_header
+
+block lowerbody
+    .span4
+        .well
+            form(action='/login', method='post')
+              fieldset
+                h2 Login
+                hr
+                input.input-medium(type='text', name='user', placeholder='Username')
+                input.input-medium(type='password', name='pass', placeholder='Password')
+                br
+                label.checkbox
+                  input(type='checkbox', name='remember')
+                  | Remember Me
+                hr
+                input.btn.pull-right(type='submit', value='Sign in')
+    .span4
+      .well
+        form(action='/register', method='post')
+          fieldset
+            h2 Register
+            hr
+            input.input-large(type='text', name='email', placeholder='Email')
+            br
+            input.input-medium(type='text', name='user', placeholder='Username')
+            br
+            input.input-medium(type='password', name='pass', placeholder='Password')
+            br
+            input.input-medium(type='password', name='pass2', placeholder='Password Again')
+            hr
+            input.btn.pull-right(type='submit', value='Sign in')
